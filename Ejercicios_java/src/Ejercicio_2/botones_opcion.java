@@ -9,12 +9,12 @@ package Ejercicio_2;
  *
  * @author aleja
  */
-public class botones_opcion extends javax.swing.JFrame {
+public class Botones_Opcion extends javax.swing.JFrame {
 
     /**
      * Creates new form botones_opcion
      */
-    public botones_opcion() {
+    public Botones_Opcion() {
         initComponents();
         rojo.setSelected(true);
     }
@@ -156,20 +156,21 @@ public class botones_opcion extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(botones_opcion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Botones_Opcion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(botones_opcion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Botones_Opcion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(botones_opcion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Botones_Opcion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(botones_opcion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Botones_Opcion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new botones_opcion().setVisible(true);
+                new Botones_Opcion().setVisible(true);
             }
         });
     }

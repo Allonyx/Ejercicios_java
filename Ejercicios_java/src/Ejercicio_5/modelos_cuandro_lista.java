@@ -5,18 +5,21 @@
  */
 package Ejercicio_5;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+
+
 
 /**
  *
  * @author aleja
  */
-public class modelos_cuandro_lista extends javax.swing.JFrame {
+public class Modelos_Cuandro_Lista extends javax.swing.JFrame {
 
     /**
      * Creates new form modelos_cuandro_lista
      */
-    public modelos_cuandro_lista() {
+    public Modelos_Cuandro_Lista() {
         initComponents();
     }
 
@@ -58,6 +61,17 @@ public class modelos_cuandro_lista extends javax.swing.JFrame {
             }
         });
 
+        resultado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                resultadoMouseClicked(evt);
+            }
+        });
+        resultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resultadoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -66,12 +80,11 @@ public class modelos_cuandro_lista extends javax.swing.JFrame {
                 .addGap(97, 97, 97)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(resultado)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jScrollPane1)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(curso_1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(curso_2))))
+                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(curso_1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(curso_2)))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -98,8 +111,7 @@ public class modelos_cuandro_lista extends javax.swing.JFrame {
         modelo.addElement("Juan");
         modelo.addElement("María");
         modelo.addElement("Luis");
-        nombres.setModel(modelo);   
-
+        nombres.setModel(modelo);  
     }//GEN-LAST:event_curso_1ActionPerformed
 
     private void curso_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curso_2ActionPerformed
@@ -110,13 +122,20 @@ public class modelos_cuandro_lista extends javax.swing.JFrame {
         modelo.addElement("Marta");
         modelo.addElement("Jose");
         nombres.setModel(modelo);
-
     }//GEN-LAST:event_curso_2ActionPerformed
 
     private void nombresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nombresMouseClicked
         // TODO add your handling code here:
         resultado.setText(nombres.getSelectedValue().toString());
     }//GEN-LAST:event_nombresMouseClicked
+
+    private void resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_resultadoActionPerformed
+
+    private void resultadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resultadoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_resultadoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -135,20 +154,21 @@ public class modelos_cuandro_lista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(modelos_cuandro_lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modelos_Cuandro_Lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(modelos_cuandro_lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modelos_Cuandro_Lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(modelos_cuandro_lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modelos_Cuandro_Lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(modelos_cuandro_lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modelos_Cuandro_Lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new modelos_cuandro_lista().setVisible(true);
+                new Modelos_Cuandro_Lista().setVisible(true);
             }
         });
     }
