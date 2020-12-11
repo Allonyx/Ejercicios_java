@@ -134,7 +134,6 @@ public class Modelos_Cuadros_Lista_2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
         
-        modelo.addElement("");
         numeros.setModel(modelo);
         resultado.setText("");
     }//GEN-LAST:event_vaciarActionPerformed
